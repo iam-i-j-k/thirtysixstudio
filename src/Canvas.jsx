@@ -11,7 +11,7 @@ const Canvas = ({details}) => {
     useGSAP(()=>{
         gsap.to(index, {
             value: startIndex + numImages - 1,
-            duration: duration,
+            duration: duration*1.7,
             repeat: -1,
             ease: "linear",
             onUpdate: () =>{

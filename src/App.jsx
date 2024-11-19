@@ -34,7 +34,7 @@ const App = () => {
       gsap.set(growingSpan.current,{
         top: e.clientY,
         left: e.clientX,
-        scale: showCanvas ? 120 : 0,
+        scale: showCanvas ? window.innerWidth : 0,
       });
 
       gsap.to("body", {
@@ -44,7 +44,7 @@ const App = () => {
       });
 
       gsap.to(growingSpan.current,{
-        scale: showCanvas ? 0 : 200,
+        scale: showCanvas ? 1 : window.innerWidth,
         duration: 1.25,
         ease: "power2.inOut",
       });
@@ -55,7 +55,7 @@ const App = () => {
   return (
     <>
       <span ref={growingSpan} className="growing block top-[-20px] left-[-20px] w-4 h-4 sm:w-5 sm:h-5 fixed rounded-full"></span>
-      <div data-scroll-container>
+      <div data-scroll-container> 
         
         <div className="w-full absolute h-screen text-white text-5xl">
       {showCanvas && data[0].map((item,index)=>(
@@ -95,7 +95,7 @@ const App = () => {
           
             <h1
             ref={headingRef}
-            className="text-5xl sm:text-7xl md:text-9xl flex flex-wrap md:flex-nowrap tracking-tight px-2">
+            className="text-5xl sm:text-7xl md:text-9xl lg:text-[12xl] flex flex-wrap md:flex-nowrap tracking-tight px-2">
               <span className='w-full md:w-auto md:text-[12.33rem] md:pl-3'>Thirty</span><span className='w-full md:w-auto md:text-[12.33rem]'>six</span><span className='w-full md:w-auto md:text-[12.33rem]'>studio</span>
             </h1>
           </div>
@@ -111,8 +111,7 @@ const App = () => {
             OUR SERVICES
             </h2>
             <p className='text-lg sm:text-2xl leading-[1.8] sm:leading-[2] tracking-tight mt-4 sm:mt-5 mb-6 sm:mb-10 font-[300] md:mt-10 md:w-[80%] '>
-              We're a boutique production studio focused on design, motion, and cr
-              eative technology, constantly reimagining what digital craft can do for present-time ads and campaigns.
+              We're a boutique production studio focused on design, motion, and creative technology, constantly reimagining what digital craft can do for present-time ads and campaigns.
               <br />
               We provide captivating design, interactive animations, advancedusability, reliablecode, and immaculate project coordination. Whether you need a campaign built from scratch or assistance at a specific phase, we’ve got you covered.
             </p>
@@ -120,7 +119,7 @@ const App = () => {
             <img 
               src="https://api.funkhaus.us/wp-content/uploads/2024/08/Hero-Image-1-808x540.jpg" 
               alt="" 
-              className="w-full h-auto object-cover"
+              className="w-full h-screen object-cover"
             />
           </div>
         </div>
