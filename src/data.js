@@ -40,7 +40,7 @@ export default [
             startIndex: 600,
             numImages: 150,
             duration: 3,
-            size: 269,
+            size: 259,
             top: 24,
             left: 68,
             zIndex: 0,

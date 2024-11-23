@@ -57,7 +57,7 @@ const App = () => {
       <span ref={growingSpan} className="growing block top-[-20px] left-[-20px] w-4 h-4 sm:w-5 sm:h-5 fixed rounded-full"></span>
       <div data-scroll-container> 
         
-        <div className="w-full absolute h-screen text-white text-5xl overflow-hidden">
+        <div className="w-full absolute h-screen text-white text-5xl">
       {showCanvas && data[0].map((item,index)=>(
             <Canvas key={index} details={item} />
           ))}
@@ -93,7 +93,7 @@ const App = () => {
           
           <div className="w-full">
           
-          <div className="w-full absolute pointer-events-none h-screen overflow-hidden text-white text-5xl">
+          <div className="w-full absolute pointer-events-none h-screen text-white text-5xl">
       
       {showCanvas && data[1].map((item,index)=>(
             <Canvas key={index}  details={item} />
@@ -119,7 +119,7 @@ const App = () => {
           </div>
           <div className="w-full absolute h-screen text-white text-5xl">
       
-      {showCanvas && data[2].map((item,index)=>(
+        {showCanvas && data[2].map((item,index)=>(
             <Canvas key={index}  details={item} />
           ))}
 
@@ -134,7 +134,8 @@ const App = () => {
               We provide captivating design, interactive animations, advancedusability, reliablecode, and immaculate project coordination. Whether you need a campaign built from scratch or assistance at a specific phase, we’ve got you covered.
             </p>
             
-            <img 
+            <img
+              id='projects' 
               src="https://api.funkhaus.us/wp-content/uploads/2024/08/Hero-Image-1-808x540.jpg" 
               alt="" 
               className="w-screen h-screen object-cover"
