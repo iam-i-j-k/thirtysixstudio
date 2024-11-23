@@ -16,8 +16,18 @@ const App = () => {
     const locomotiveScroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
-      smoothMobile: true
+      smoothMobile: true,
+      smartphone: {
+        smooth: true
+      },
+      tablet: {
+        smooth: true
+      }
     });
+
+    return () => {
+      if (locomotiveScroll) locomotiveScroll.destroy();
+    };
   },[]);
 
   useGSAP(()=>{
@@ -55,7 +65,7 @@ const App = () => {
   return (
     <>
       <span ref={growingSpan} className="growing block top-[-20px] left-[-20px] w-4 h-4 sm:w-5 sm:h-5 fixed rounded-full"></span>
-      <div data-scroll-container> 
+      <div data-scroll-container className="relative"> 
         
         <div className="w-full absolute h-screen text-white text-5xl">
       {showCanvas && data[0].map((item,index)=>(
