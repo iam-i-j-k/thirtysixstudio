@@ -93,15 +93,33 @@ const App = () => {
           
           <div className="w-full">
           
+          <div className="w-full absolute pointer-events-none h-screen text-white text-5xl">
+      
+      {showCanvas && data[1].map((item,index)=>(
+            <Canvas key={index}  details={item} />
+          ))}
+
+          </div>
+
             <h1
             ref={headingRef}
-            className="text-5xl sm:text-7xl md:text-9xl lg:text-[12xl] flex flex-wrap md:flex-nowrap tracking-tight px-2">
-              <span className='w-full md:w-auto md:text-[12.33rem] md:pl-3'>Thirty</span><span className='w-full md:w-auto md:text-[12.33rem]'>six</span><span className='w-full md:w-auto md:text-[12.33rem]'>studio</span>
+            className="text-5xl sm:text-7xl md:text-9xl w-full tracking-tight px-2">
+              <span className='block w-full text-[20vw] leading-[0.8]'>Thirty</span>
+              <span className='flex items-center gap-2 block w-full text-[20vw] leading-[0.8]'>six 
+                {!showCanvas && <span className='rounded-full hover:bg-white transition-all ease-in-out duration-300 mt-4 sm:mt-6 md:mt-8 mx-4 sm:mx-6 md:mx-8'>
+                  <img 
+                    src="https://thirtysixstudio.com/peppers/pepperA/40.png" 
+                    className="w-[80px] sm:w-[100px] md:w-[150px] h-auto" 
+                    alt="Decorative pepper" 
+                  />
+                </span>}
+              </span>
+              <span className='block w-full text-[20vw] leading-[0.8]'>studio</span>
             </h1>
           </div>
           <div className="w-full absolute h-screen text-white text-5xl">
       
-      {showCanvas && data[1].map((item,index)=>(
+      {showCanvas && data[2].map((item,index)=>(
             <Canvas key={index}  details={item} />
           ))}
 
