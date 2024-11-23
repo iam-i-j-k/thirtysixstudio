@@ -9,7 +9,7 @@
 }
 
 *{
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
 }
 
@@ -17,7 +17,6 @@ body{
   background-color: #000;
   color: #fff;
   transition: all 0.1s cubic-bezier(0.23, 1, 0.320, 1);
-  overflow: hidden;
   /* background-color: #FD2C2A; */
 }
 
