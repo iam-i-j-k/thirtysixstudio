@@ -65,7 +65,7 @@ const App = () => {
   return (
     <>
       <span ref={growingSpan} className="growing block top-[-20px] left-[-20px] w-4 h-4 sm:w-5 sm:h-5 fixed rounded-full"></span>
-      <div data-scroll-container className="relative"> 
+      <div data-scroll-container className="relative overflow-hidden"> 
         
         <div className="w-full absolute h-screen text-white text-5xl">
       {showCanvas && data[0].map((item,index)=>(
