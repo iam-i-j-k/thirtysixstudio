@@ -137,7 +137,7 @@ const App = () => {
             <img 
               src="https://api.funkhaus.us/wp-content/uploads/2024/08/Hero-Image-1-808x540.jpg" 
               alt="" 
-              className="w-full h-screen object-cover"
+              className="w-screen h-screen object-cover"
             />
           </div>
         </div>
